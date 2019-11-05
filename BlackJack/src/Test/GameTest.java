@@ -61,10 +61,10 @@ class GameTest {
 		Player player = new Player();
 		Card z = new Card(CardType.ACE,CardSuite.CLUB);
 		Card e = new Card(CardType.JACK,CardSuite.SPADE);
-		Card b = new Card(CardType.NINE,CardSuite.DIAMOND);
+		Card r = new Card(CardType.NINE,CardSuite.DIAMOND);
 		player.getHand().add(z);
 		player.getHand().add(e);
-		player.getHand().add(b);
+		player.getHand().add(r);
 
 		assertEquals(player.getHand().cardValue(),20);
 	}
