@@ -36,29 +36,25 @@ package Players;
       * @return true
       */
      @Override
-     public boolean add(Card x) {
-         if (!ace()) {
-             if (cardValue() < 11) {
-                 if (x.getCardType().equals(CardType.ACE) || (cardValue() == 10 && x.getCardType().equals(CardType.ACE))) {
-                     x.setValue(11);
-                 }
-            
-         }
-         }
-         
-         if(ace() && cardValue()+x.getValue()>21) {
-         
-         for(Card b : this) {
-        	 if(b.getCardType()==CardType.ACE) {
-             if(b.getValue()==11) {
-             b.setValue(1);
-             break;
-             }
-        		 
-        	 }
-         }
-        	 
-         }
+    public boolean add(Card x) {
+        if (!ace()) {
+            if (cardValue() < 11) {
+                if (x.getCardType().equals(CardType.ACE) || (cardValue() == 10 && x.getCardType().equals(CardType.ACE))) {
+                    x.setValue(11);
+                }
+            }
+        }
+
+        if (ace() && cardValue() + x.getValue() > 21) {
+            for (Card b: this) {
+                if (b.getCardType() == CardType.ACE) {
+                    if (b.getValue() == 11) {
+                        b.setValue(1);
+                        break;
+                    }
+                }
+            }
+        }
         	 
         	 
          
